@@ -1,0 +1,29 @@
+// The Vue build version to load with the `import` command
+// (runtime-only or standalone) has been set in webpack.base.conf with an alias.
+import Vue from 'vue'
+import App from './App'
+import router from './router'
+import axios from 'axios'
+import ElementUI from 'element-ui'
+import cookie from '../static/cookie'
+import vuex from 'vuex'
+
+
+
+
+Vue.config.productionTip = false
+Vue.prototype.$axios = axios
+Vue.prototype.$cookie = cookie
+Vue.prototype.$vuex = vuex
+
+
+Vue.use(ElementUI)
+
+
+/* eslint-disable no-new */
+new Vue({
+  el: '#app',
+  router,
+  components: { App },
+  template: '<App/>'
+})
